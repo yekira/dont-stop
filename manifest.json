@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Dotter Freeze",
+    "version": "4.0",
+    "description": "文字に疲れた全ての人に捧げる拡張機能です。Ctrlとドット(.)を同時押ししてテキストのない世界へダイブしよう。",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ],
+    "commands": {
+        "toggle-content-script": {
+            "suggested_key": {
+                "default": "Ctrl+Period",
+                "mac": "Command+Period"
+            },
+            "description": "有効/無効を切り替えるZE☆"
+        }
+    },
+    "permissions": [
+        "activeTab",
+        "storage"
+    ]
+}
