@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "Dotter Freeze",
-    "version": "4.0",
+    "name": "Dont Stop",
+    "version": "5.0",
     "description": "文字に疲れた全ての人に捧げる拡張機能です。Ctrlとドット(.)を同時押ししてテキストのない世界へダイブしよう。",
     "background": {
         "service_worker": "background.js"
@@ -10,6 +10,10 @@
         {
             "matches": [
                 "<all_urls>"
+            ],
+            "exclude_matches": [
+                "https://github.com/**",
+                "https://ai.ls/**"
             ],
             "js": [
                 "content-script.js"

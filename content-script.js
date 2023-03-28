@@ -4,8 +4,8 @@ function fixNode(node) {
     if (!parent) {
         return;
     }
-    // 親要素がcssかjsだったら処理しない
-    if (['style', 'script', 'noscript'].includes(parent.tagName.toLowerCase())) {
+    // 親要素がtitleかcssかjsだったら処理しない
+    if (['title','style', 'script', 'noscript'].includes(parent.tagName.toLowerCase())) {
         return;
     }
     // そもそもテキストではない場合は処理しない
